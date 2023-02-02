@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="voice_validation_message_tab" translate="label" sortOrder="1000">
+            <label>Voice Validation Message</label>
+        </tab>
+        <section id="voice_validation_messages" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+            <class>separator-top</class>
+            <label>General</label>
+            <tab>voice_validation_message_tab</tab>
+            <resource>Magento_VoiceValidationMessages::configurations</resource>
+            <group id="settings" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Speech Synthesis Validation Message</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Speech Validation Message feature will be enabled.</comment>
+                </field>
+            </group>
+        </section>  
+    </system>
+</config>
